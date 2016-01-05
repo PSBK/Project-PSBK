@@ -41,10 +41,11 @@ if (isset($_SESSION["order"])) {
         $date = $dDate;
         $tripType = "Departure";
     } else {
+        header("Location: ./index.php?msg=" . $msg);
         ?>
-        <script>
+        <!--script>
             window.location = "<?= $s->getPath();?>index.php?msg=<?=$msg;?>"
-        </script>
+        </script-->
         <?
     }
 }

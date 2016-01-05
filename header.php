@@ -64,16 +64,15 @@ $s = new Setting();
 <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please upgrade your browser.</p>
 <![endif]-->
 
-<!--<div id="preloader">-->
-<!--    <div class="sk-spinner sk-spinner-wave">-->
-<!--        <div class="sk-rect1"></div>-->
-<!--        <div class="sk-rect2"></div>-->
-<!--        <div class="sk-rect3"></div>-->
-<!--        <div class="sk-rect4"></div>-->
-<!--        <div class="sk-rect5"></div>-->
-<!--    </div>-->
-<!--</div>-->
-<!-- End Preload -->
+<div id="preloader">
+    <div class="sk-spinner sk-spinner-wave">
+        <div class="sk-rect1"></div>
+        <div class="sk-rect2"></div>
+        <div class="sk-rect3"></div>
+        <div class="sk-rect4"></div>
+        <div class="sk-rect5"></div>
+    </div>
+</div>
 
 <div class="layer"></div>
 <!-- Mobile menu overlay mask -->
@@ -138,9 +137,9 @@ $s = new Setting();
         <div class="row">
             <div class="col-md-3 col-sm-3 col-xs-3">
                 <div id="logo">
-                    <a href="index.php"><img src="img/logo_bisma.png" width="160" height="34" alt="City tours"
+                    <a href="./index.php"><img src="img/logo_bisma.png" width="160" height="34" alt="Bisma"
                                              data-retina="true" class="logo_normal"></a>
-                    <a href="index.php"><img src="img/logo_bisma.png" width="160" height="34" alt="City tours"
+                    <a href="./index.php"><img src="img/logo_bisma.png" width="160" height="34" alt="Bisma"
                                              data-retina="true" class="logo_sticky"></a>
                 </div>
             </div>
@@ -154,14 +153,27 @@ $s = new Setting();
                     <a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
                     <ul>
                         <li class="submenu">
-                            <a href="index.php" class="show-submenu">Home </a>
+                            <a href="./index.php" class="show-submenu">Home </a>
                         </li>
                         <li class="submenu">
-                            <a href="promoList.php" class="show-submenu">Promo</a>
+                            <a href="./promoList.php" class="show-submenu">Promo</a>
                         </li>
-                        <li class="submenu">
-                            <a href="./ticket_list.php" class="show-submenu">Tickets </a>
-                        </li>
+                        <?
+                        if (isset($_SESSION["name"])) {
+                            ?>
+                            <li class="submenu">
+                                <a href="./ticket_list.php" class="show-submenu">Tickets</a>
+                            </li>
+                            <?
+                        }else{
+                            ?>
+                            <li class="submenu">
+                                <a href="./register.php" class="show-submenu">Register</a>
+                            </li>
+                            <?
+                        }
+                        ?>
+
                         <li class="submenu">
                             <a href="javascript:void(0);" class="show-submenu">Payment </a>
                         </li>
