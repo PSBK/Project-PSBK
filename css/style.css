@@ -361,7 +361,7 @@ a.btn_full_outline {
 }
 
 .sticky ul#top_tools a, header#plain ul#top_links :hover a, header#plain ul#top_tools a {
-    color: #333
+    /*color: #333*/
 }
 
 a.btn_full_outline:hover {
@@ -1250,7 +1250,7 @@ ul#cat_nav i {
 
 .img_list {
     overflow: hidden;
-    min-height: 220px;
+    min-height: 150px;
     position: relative
 }
 
@@ -1286,8 +1286,9 @@ ul#cat_nav i {
 .tour_list_desc {
     padding: 10px 20px 0 0;
     border-right: 1px solid #ededed;
-    height: 220px;
-    line-height: 17px
+    height: 150px;
+    line-height: 17px;
+    vertical-align: middle;
 }
 
 .tour_list_desc h3 {
@@ -1299,8 +1300,8 @@ ul#cat_nav i {
 
 .price_list {
     display: table;
-    height: 220px;
-    font-size: 38px;
+    height: 150px;
+    font-size: 28px;
     color: #e74c3c;
     width: 100%;
     margin-left: -15px

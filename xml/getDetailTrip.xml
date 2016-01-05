@@ -1,0 +1,11 @@
+<NewDataSet>
+    <Table1>
+        <vendor>ROSALIA</vendor>
+        <asal>CGK</asal>
+        <tujuan>BDG</tujuan>
+        <jam_berangkat>2015-12-20T00:00:00+07:00</jam_berangkat>
+        <jam_sampai>2015-12-20T00:00:00+07:00</jam_sampai>
+        <id_bus>1</id_bus>
+        <harga>75000.00</harga>
+    </Table1>
+</NewDataSet>

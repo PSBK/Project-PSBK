@@ -138,9 +138,9 @@
                         <li class="submenu">
                             <a href="javascript:void(0);" class="show-submenu">Tours <i class="icon-down-open-mini"></i></a>
                             <ul>
-                                <li><a href="all_tours_list.html">All tours list</a></li>
-                                <li><a href="all_tours_grid.html">All tours grid</a></li>
-                                <li><a href="single_tour.html">Single tour page</a></li>
+                                <li><a href="origin/all_tours_list.html">All tours list</a></li>
+                                <li><a href="origin/all_tours_grid.html">All tours grid</a></li>
+                                <li><a href="origin/single_tour.html">Single tour page</a></li>
                                 <li><a href="single_tour_with_gallery.html">Single tour with gallery</a></li>
                                 <li><a href="single_tour_working_booking.php">Single tour working booking</a></li>
                             </ul>
@@ -167,12 +167,12 @@
                             <div class="menu-wrapper">
                                 <div class="col-md-4">
                                     <h3>Pages</h3><ul>
-                                        <li><a href="about.html">About us</a></li>
+                                        <li><a href="origin/about.html">About us</a></li>
                                         <li><a href="general_page.html">General page</a></li>
                                         <li><a href="tourist_guide.html">Tourist guide</a></li>
-                                        <li><a href="cart.html">Cart Tours</a></li>
-                                        <li><a href="payment.html">Payment Tours</a></li>
-                                        <li><a href="confirmation.html">Confirmation Tours</a></li>
+                                        <li><a href="origin/cart.html">Cart Tours</a></li>
+                                        <li><a href="origin/payment.html">Payment Tours</a></li>
+                                        <li><a href="origin/confirmation.html">Confirmation Tours</a></li>
                                         <li><a href="cart_hotel.html">Cart Hotel</a></li>
                                         <li><a href="payment_hotel.html">Payment Hotel</a></li>
                                         <li><a href="confirmation_hotel.html">Confirmation Hotel</a></li>
@@ -190,8 +190,8 @@
                                         <li><a href="contact_us_2.html">Contact us 2</a></li>
                                         <li><a href="blog_right_sidebar.html">Blog</a></li>
                                         <li><a href="blog.html">Blog left sidebar</a></li>
-                                        <li><a href="login.html">Login</a></li>
-                                        <li><a href="register.html">Register</a></li>
+                                        <li><a href="origin/login.html">Login</a></li>
+                                        <li><a href="origin/register.html">Register</a></li>
                                         <li><a href="invoice.html" target="_blank">Invoice</a></li>
                                         <li><a href="404.html">404 Error page</a></li>
                                         <li><a href="site_launch/index.html">Site launch / Coming soon</a></li>
@@ -264,8 +264,8 @@
                                 </li>
                                 <li>
                                     <div>Total: <span>$120.00</span></div>
-                                    <a href="cart.html" class="button_drop">Go to cart</a>
-                                    <a href="payment.html" class="button_drop outline">Check out</a>
+                                    <a href="origin/cart.html" class="button_drop">Go to cart</a>
+                                    <a href="origin/payment.html" class="button_drop outline">Check out</a>
                                 </li>
                             </ul>
                         </div><!-- End dropdown-cart-->

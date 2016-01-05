@@ -1,1 +1,42 @@
-<ArrayOfDATA_STRUCT><DATA_STRUCT><idpromo>001</idpromo><kelas>Business Class</kelas><harga>345000</harga><kota_asal>JAKARTA</kota_asal><kota_tujuan>TANGERANG</kota_tujuan><gambar>http://localhost/PSBK-UI/img/tempat/tangerang.jpg</gambar></DATA_STRUCT><DATA_STRUCT><idpromo>002</idpromo><kelas>Super Executive Class</kelas><harga>450000</harga><kota_asal>SEMARANG</kota_asal><kota_tujuan>JAKARTA</kota_tujuan><gambar>http://localhost/PSBK-UI/img/tempat/jakarta.jpg</gambar></DATA_STRUCT><DATA_STRUCT><idpromo>003</idpromo><kelas>Economy Class</kelas><harga>180000</harga><kota_asal>SURABAYA</kota_asal><kota_tujuan>BALI</kota_tujuan><gambar>http://localhost/PSBK-UI/img/tempat/bali.jpg</gambar></DATA_STRUCT><DATA_STRUCT><idpromo>004</idpromo><kelas>Business Class</kelas><harga>36000</harga><kota_asal>BOGOR</kota_asal><kota_tujuan>YOGYAKARTA</kota_tujuan><gambar>http://localhost/PSBK-UI/img/tempat/yogyakarta.jpg</gambar></DATA_STRUCT><DATA_STRUCT><idpromo>005</idpromo><kelas>Executive Class</kelas><harga>422000</harga><kota_asal>JAKARTA</kota_asal><kota_tujuan>LAMPUNG</kota_tujuan><gambar>http://localhost/PSBK-UI/img/tempat/lampung.jpg</gambar></DATA_STRUCT></ArrayOfDATA_STRUCT>
+<ArrayOfDATA_STRUCT>
+    <DATA_STRUCT>
+        <idpromo>001</idpromo>
+        <kelas>Business Class</kelas>
+        <harga>345000</harga>
+        <kota_asal>JAKARTA</kota_asal>
+        <kota_tujuan>TANGERANG</kota_tujuan>
+        <gambar>http://localhost/PSBK-UI/img/tempat/tangerang.jpg</gambar>
+    </DATA_STRUCT>
+    <DATA_STRUCT>
+        <idpromo>002</idpromo>
+        <kelas>Super Executive Class</kelas>
+        <harga>450000</harga>
+        <kota_asal>SEMARANG</kota_asal>
+        <kota_tujuan>JAKARTA</kota_tujuan>
+        <gambar>http://localhost/PSBK-UI/img/tempat/jakarta.jpg</gambar>
+    </DATA_STRUCT>
+    <DATA_STRUCT>
+        <idpromo>003</idpromo>
+        <kelas>Economy Class</kelas>
+        <harga>180000</harga>
+        <kota_asal>SURABAYA</kota_asal>
+        <kota_tujuan>BALI</kota_tujuan>
+        <gambar>http://localhost/PSBK-UI/img/tempat/bali.jpg</gambar>
+    </DATA_STRUCT>
+    <DATA_STRUCT>
+        <idpromo>004</idpromo>
+        <kelas>Business Class</kelas>
+        <harga>36000</harga>
+        <kota_asal>BOGOR</kota_asal>
+        <kota_tujuan>YOGYAKARTA</kota_tujuan>
+        <gambar>http://localhost/PSBK-UI/img/tempat/yogyakarta.jpg</gambar>
+    </DATA_STRUCT>
+    <DATA_STRUCT>
+        <idpromo>005</idpromo>
+        <kelas>Executive Class</kelas>
+        <harga>422000</harga>
+        <kota_asal>JAKARTA</kota_asal>
+        <kota_tujuan>LAMPUNG</kota_tujuan>
+        <gambar>http://localhost/PSBK-UI/img/tempat/lampung.jpg</gambar>
+    </DATA_STRUCT>
+</ArrayOfDATA_STRUCT>

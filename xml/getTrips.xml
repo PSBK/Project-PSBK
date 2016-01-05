@@ -1,0 +1,22 @@
+<NewDataSet>
+    <Table1>
+        <id_perjalanan>1</id_perjalanan>
+        <vendor>ROSALIA</vendor>
+        <asal>CGK</asal>
+        <tujuan>BDG</tujuan>
+        <jam_berangkat>2015-12-20T00:00:00+07:00</jam_berangkat>
+        <jam_sampai>2015-12-20T00:00:00+07:00</jam_sampai>
+        <id_bus>1</id_bus>
+        <harga_jual>80000.00</harga_jual>
+    </Table1>
+    <Table1>
+        <id_perjalanan>2</id_perjalanan>
+        <vendor>ROSALIA INDAH</vendor>
+        <asal>CGK</asal>
+        <tujuan>BDG</tujuan>
+        <jam_berangkat>2015-12-20T00:00:00+08:00</jam_berangkat>
+        <jam_sampai>2015-12-20T00:00:00+09:00</jam_sampai>
+        <id_bus>2</id_bus>
+        <harga_jual>90000.00</harga_jual>
+    </Table1>
+</NewDataSet>

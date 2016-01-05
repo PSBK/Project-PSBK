@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/PSBK-UI.iml" filepath="$PROJECT_DIR$/.idea/PSBK-UI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PSBK.iml" filepath="$PROJECT_DIR$/.idea/PSBK.iml" />
     </modules>
   </component>
 </project>
