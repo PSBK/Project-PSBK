@@ -6,6 +6,7 @@
  * Time: 10:47 PM
  */
 include_once("./Setting.php");
+include_once("./Order.php");
 session_start();
 
 $s = new Setting();
