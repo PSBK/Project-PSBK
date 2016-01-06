@@ -2,6 +2,7 @@
 
 class Setting
 {
+
     private $url = "http://localhost:8888/PSBK/xml/";
 //    private  $url = "http://192.168.1.172/publish/ticbusonws.asmx/";
     private $nPath = "http://localhost:8888/PSBK/";
@@ -15,7 +16,9 @@ class Setting
     private $urlindex = "xml/listkota.xml";
 
 
-    //////////////DUMMY XML LINKS///////////////////////////////////////////////
+    //////////////DUMMY XML LINKS START///////////////////////////////////////////////
+
+    //Comment Bagian Dummy xml links untuk LIVE testing//
     private $originUrl = "getOrigin.xml";
     private $destinationUrl = "getDestination.xml";
     private $login = "login.xml";
@@ -30,9 +33,13 @@ class Setting
     private $userDetailByEmail = "getUserDetailByEmail.xml";
     private $updateToPaid = "updateToPaid.xml";
     private $promo = "getPromo.xml";
+    //////////////DUMMY XML LINKS END///////////////////////////////////////////////
 
 
     /////////////////REAL WEB SERVICES METHOD////////////////////////////
+
+    //Uncomment Bagian Real web services method untuk LIVE testing//
+
 
 //    private $originUrl = "getOrigin";
 //    private $destinationUrl = "getDestination";
