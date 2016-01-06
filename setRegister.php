@@ -7,7 +7,7 @@
  */
 
 //email, password, nama, kota, noKtp, noTelp
-
+session_start();
 include_once("./Setting.php");
 $s = new Setting();
 
@@ -26,5 +26,15 @@ $data = simplexml_load_file($url);
 if ($data->count() == 0) {
     $msg = "User Already Exist";
     $msg = base64_encode($msg);
-    header("Location: " . $s->getPath() . "index.php?msg=" . $msg);
+} else {
+//    $data->children()[0]->user_id;
+    $user = $data->children()[0];
+    $_SESSION["uid"] = (string)$user->user_id;
+    $_SESSION["mail"] = (string)$user->email;
+    $_SESSION["name"] = (string)$user->nama;
+    $msg = "Register Success";
+    $msg = base64_encode($msg);
+//    print_r($_SESSION);
 }
+
+header("Location: " . $s->getPath() . "index.php?msg=" . $msg);
