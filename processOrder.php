@@ -16,6 +16,7 @@ $actualUrl = base64_encode($actualUrl);
 
 if (!isset($_SESSION['uid']) || !isset($_SESSION['mail']) || $_SESSION['uid'] == "" || $_SESSION['uid'] == null) {
     header("Location: " . $s->getPath() . "login.php?fr=" . $actualUrl);
+    return;
 } else {
     $user = $_SESSION['uid'];
 }

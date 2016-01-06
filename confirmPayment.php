@@ -1,7 +1,7 @@
 <?
-include_once("header.php");
-include_once("./Setting.php");
 session_start();
+include_once("./header.php");
+include_once("./Setting.php");
 $s = new Setting();
 
 if (isset($_GET['oid']) && isset($_SESSION['uid']) && $_GET['oid'] != "") {
