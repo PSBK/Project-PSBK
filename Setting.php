@@ -2,14 +2,8 @@
 
 class Setting
 {
-
     private $url = "http://localhost/PSBK/xml/";
-//    private  $url = "http://192.168.1.172/publish/ticbusonws.asmx/";
     private $nPath = "http://localhost/PSBK/";
-
-
-    //http://192.168.1.172/tickbusonws.asmx/login
-
 
     private $urlticket = "xml/ticketlist.xml";
     private $urlpromo = "xml/promolist.xml";
@@ -17,7 +11,6 @@ class Setting
 
 
     //////////////DUMMY XML LINKS START///////////////////////////////////////////////
-
     //Comment Bagian Dummy xml links untuk LIVE testing//
     private $originUrl = "getOrigin.xml";
     private $destinationUrl = "getDestination.xml";
@@ -35,12 +28,8 @@ class Setting
     private $promo = "getPromo.xml";
     //////////////DUMMY XML LINKS END///////////////////////////////////////////////
 
-
     /////////////////REAL WEB SERVICES METHOD////////////////////////////
-
     //Uncomment Bagian Real web services method untuk LIVE testing//
-
-
 //    private $originUrl = "getOrigin";
 //    private $destinationUrl = "getDestination";
 //    private $login = "login.xml";
