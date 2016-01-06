@@ -24,11 +24,11 @@ if (isset($_POST['id']) && isset($_POST['bankName']) && isset($_POST['accNo']) &
     $data = simplexml_load_file($url);
 
     if ($data->count() == 0) {
-        $msg = "Confirmation Failed";
+        $msg = "Confirmation Ticket with ID : $id Failed";
         $msg = base64_encode($msg);
         header("Location: " . $s->getPath() . "confirmPayment.php?oid=$id&msg=$msg");
     } else {
-        $msg = "Confirmation Success";
+        $msg = "Confirmation Ticket with ID : $id Success";
         $msg = base64_encode($msg);
         header("Location: " . $s->getPath() . "index.php?msg=$msg");
     }

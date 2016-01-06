@@ -5,7 +5,7 @@
  * Date: 12/27/15
  * Time: 11:24 AM
  */
-
+ob_start();
 session_start();
 include_once("Setting.php");
 $s = new Setting();
@@ -26,10 +26,8 @@ if(isset($_SESSION["name"])){
 }
 
 $url = $s->getLoginUrl() . "?email=" . $mail . "&password=" . $pass;
-//$urlFalse = "http://192.168.1.172/publish/ticbusonws.asmx/login?email=%27" . $mail . "%27&password=%27" . $pass . "%27";
 $urlFalse = "http://localhost:8888/PSBK/xml/loginFalse.xml";
 $data = simplexml_load_file($url);
-//print_r($data);
 
 if ($data->count() != 0) {
     $uid = (string)$data->children()[0]->user_id;
@@ -44,12 +42,8 @@ if ($data->count() != 0) {
     $msg = "Login Failed";
     $msg = base64_encode($msg);
     header("Location: index.php?msg=" . $msg);
+    die();
 }
-
-//print_r($_SESSION);
-//echo $_SESSION['uid'];
-//echo $_SESSION['mail'];
-//echo $_SESSION['name'];
 
 if (isset($_GET['fr'])) {
     $fr = $_GET['fr'];
@@ -57,4 +51,6 @@ if (isset($_GET['fr'])) {
 } else {
     header("Location: index.php");
 }
+
+ob_end_flush();
 

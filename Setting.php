@@ -5,12 +5,12 @@ class Setting
     private $url;
     private $nPath;
 
-    private $urlticket = "xml/ticketlist.xml";
-    private $urlpromo = "xml/promolist.xml";
-    private $urlindex = "xml/listkota.xml";
+//    private $urlticket = "xml/ticketlist.xml";
+//    private $urlpromo = "xml/promolist.xml";
+//    private $urlindex = "xml/listkota.xml";
 
     function Setting(){
-        $this->url = "http://$_SERVER[HTTP_HOST]/PSBK/xml/";
+        $this->url = "http://$_SERVER[HTTP_HOST]/PSBK/xml/"; //GANTI DISINI UNTUK URL WS YANG ASLI
         $this->nPath = "http://$_SERVER[HTTP_HOST]/PSBK/";
     }
 

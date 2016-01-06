@@ -25,7 +25,8 @@ $url .= "?email='$email'&password='$password'&nama='$nama'&kota='$kota'&noKtp='$
 $data = simplexml_load_file($url);
 
 if ($data->count() == 0) {
-    $msg = "User Already Exist";
+    $msg = "Name :" .$nama . "\\nEmail : " . $email ."\\n";
+    $msg = "Failed Registered";
     $msg = base64_encode($msg);
 } else {
 //    $data->children()[0]->user_id;
@@ -33,7 +34,8 @@ if ($data->count() == 0) {
     $_SESSION["uid"] = (string)$user->user_id;
     $_SESSION["mail"] = (string)$user->email;
     $_SESSION["name"] = (string)$user->nama;
-    $msg = "Register Success";
+    $msg = "Name :" .$nama . "\\nID : " . $_SESSION["uid"] . "\\nEmail : " . $email . "\\n";
+    $msg .= "Registered successfully!\\nYAY!";
     $msg = base64_encode($msg);
 //    print_r($_SESSION);
 }
