@@ -16,6 +16,17 @@ if (isset($_GET['tid']) || $_GET['tid'] == "" || $_GET['tid'] == null) {
 } else {
     header("Location: " . $s->getPath());
 }
+
+//print_r($_SESSION);
+
+if (!isset($_SESSION['name'])) {
+    $fr = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
+    $fr = base64_encode($fr);
+    header("Location: ". $s->getPath() . "login.php?fr=" . $fr);
+    return;
+} else {
+}
+
 //$order = new Order();
 
 $order = unserialize($_SESSION['order']);

@@ -42,7 +42,7 @@ unset($_SESSION['order']);
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="select-label">Destination</label>
-                                <select class="form-control" id="destination" name="destination">
+                                <select class="form-control" id="destination" name="destination" disabled>
                                     <option value="">Select Destination</option>
                                 </select>
                             </div>
@@ -113,55 +113,6 @@ unset($_SESSION['order']);
     </div>
 </section>
 <!-- End hero -->
-
-
-<!--<div class="container margin_60">-->
-<!---->
-<!--    <div class="main_title">-->
-<!--        <h2>Bus <span>Promo</span></h2>-->
-<!---->
-<!--        <p>Find your bus schedule here for better price</p>-->
-<!--    </div>-->
-<!---->
-<!--    <div class="row">-->
-<!---->
-<!--        --><?php
-//        $urlpromo = "http://localhost:8888/PSBK-UI/xml/promo.xml";
-//        $promo = new Kota();
-//        $data2 = $promo->loadPromo($urlpromo);
-//        foreach ($data2->children() as $p) {
-//            ?>
-<!---->
-<!--            <div class="col-md-4 col-sm-6 wow zoomIn" data-wow-delay="0.1s">-->
-<!--                <div class="tour_container">-->
-<!--                    <div class="img_container">-->
-<!--                        <a href="origin/single_tour.html">-->
-<!--                            <img src="--><? //= $p->gambar; ?><!--" class="img-responsive" alt="">-->
-<!---->
-<!--                            <div class="ribbon top_rated"></div>-->
-<!--                            <div class="short_info">-->
-<!--                                <i class="icon_set_1_icon-26"></i>--><? //= $p->kelas; ?><!--<span-->
-<!--                                    class="price"><sup>Rp. </sup>--><? //= $p->harga; ?><!--</span>-->
-<!--                            </div>-->
-<!--                        </a>-->
-<!--                    </div>-->
-<!--                    <div class="tour_title">-->
-<!--                        <h3>--><? //= $p->kota_asal; ?><!-- - --><? //= $p->kota_tujuan; ?><!--</h3>-->
-<!---->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            --><?php
-//        }
-//        ?>
-<!---->
-<!--    </div>-->
-<!--    <!-- End row -->-->
-<!--    <p class="text-center nopadding">-->
-<!--        <a href="#" class="btn_1 medium"><i class="icon-eye-7"></i>View all Promo (144) </a>-->
-<!--    </p>-->
-<!--</div>-->
-<!-- End container -->
 
 <div class="white_bg">
     <div class="container margin_60">
@@ -324,6 +275,9 @@ include_once("./footer.php");
         });
 
         $('select#origin').change(function () {
+
+            $('select#destination').prop( "disabled", true );
+
             var codeOrigin = $('select#origin option:selected').val();
 //            console.log(codeOrigin);
             if (codeOrigin != "") {
@@ -340,6 +294,8 @@ include_once("./footer.php");
         });
         function addDestination(data) {
 //            console.log(data);
+
+            $('select#destination').prop( "disabled", false );
             $('select#destination').empty()
                 .append('<option value="">Select Destination</option>');
             $(data).find("Table1").each(function () {

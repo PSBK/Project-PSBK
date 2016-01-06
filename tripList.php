@@ -124,7 +124,7 @@ include_once("./header.php");
                                     <br>
                                     <small></small>
                                     <p><a href="./setOrder.php?tid=<?= $trip->id_perjalanan; ?>"
-                                          class="btn_1">Details</a></p>
+                                          class="btn_1">Get Ticket(s)</a></p>
                                 </div>
 
                             </div>
