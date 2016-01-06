@@ -91,7 +91,13 @@ $s = new Setting();
                                 <div class="dropdown dropdown-access" id="login_area">
                                     <?
                                     if (isset($_SESSION["name"])) {
-                                        
+                                        if ($_SESSION["name"] != "" || $_SESSION["name"] != null) {
+                                            ?>
+                                            <a class="dropdown-toggle"><?= $_SESSION['name']; ?></a>
+                                            &nbsp;&nbsp;&nbsp;
+                                            <a href="./logOut.php" class="dropdown-toggle">Log Out</a>
+                                        <?
+                                        }
                                     } else {
                                         ?>
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="access_link">Sign
