@@ -16,7 +16,7 @@ $typeName = "One Way";
 $tripType = "Departure";
 
 
-$getMeUrlOnichan = $s->getTrips() . "?origin='$origin'&destination='$destination'&date='$date'=&seat='$seat'&type='$type'";
+$getMeUrlOnichan = $s->getTrips();
 //echo $getMeUrlOnichan;
 $data = simplexml_load_file($getMeUrlOnichan);
 include_once("./header.php");
