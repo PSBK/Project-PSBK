@@ -91,12 +91,13 @@ $s = new Setting();
                                 <div class="dropdown dropdown-access" id="login_area">
                                     <?
                                     if (isset($_SESSION["name"])) {
-                                        ?>
-                                        <a class="dropdown-toggle"><?= $_SESSION['name']; ?></a>
-                                        &nbsp;&nbsp;&nbsp;
-                                        <a href="./logOut.php" class="dropdown-toggle">Log Out</a>
-
+                                        if ($_SESSION["name"] != "" || $_SESSION["name"] != null) {
+                                            ?>
+                                            <a class="dropdown-toggle"><?= $_SESSION['name']; ?></a>
+                                            &nbsp;&nbsp;&nbsp;
+                                            <a href="./logOut.php" class="dropdown-toggle">Log Out</a>
                                         <?
+                                        }
                                     } else {
                                         ?>
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="access_link">Sign
@@ -138,9 +139,9 @@ $s = new Setting();
             <div class="col-md-3 col-sm-3 col-xs-3">
                 <div id="logo">
                     <a href="./index.php"><img src="img/logo_bisma.png" width="160" height="34" alt="Bisma"
-                                             data-retina="true" class="logo_normal"></a>
+                                               data-retina="true" class="logo_normal"></a>
                     <a href="./index.php"><img src="img/logo_bisma.png" width="160" height="34" alt="Bisma"
-                                             data-retina="true" class="logo_sticky"></a>
+                                               data-retina="true" class="logo_sticky"></a>
                 </div>
             </div>
             <nav class="col-md-9 col-sm-9 col-xs-9">
@@ -165,7 +166,7 @@ $s = new Setting();
                                 <a href="./ticket_list.php" class="show-submenu">Tickets</a>
                             </li>
                             <?
-                        }else{
+                        } else {
                             ?>
                             <li class="submenu">
                                 <a href="./register.php" class="show-submenu">Register</a>

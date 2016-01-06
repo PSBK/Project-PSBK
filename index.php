@@ -1,7 +1,7 @@
 <?php
-include_once("header.php");
-include_once("rio/Kota.php");
-include_once("Setting.php");
+include_once("./header.php");
+//include_once("rio/Kota.php");
+include_once("./Setting.php");
 $s = new Setting();
 $bUrl = $s->getUrl();
 $path = $s->getPath();
