@@ -9,7 +9,7 @@
 include_once("Setting.php");
 $s = new Setting();
 
-if(isset($_SESSION['name'])){
+if (isset($_SESSION['name'])) {
     unset($_SESSION["uid"]);
     unset($_SESSION["mail"]);
     unset($_SESSION["name"]);
@@ -37,6 +37,9 @@ if ($data->count() != 0) {
     $_SESSION["name"] = $name;
 
 } else {
+    $msg = "Login Failed";
+    $msg = base64_encode($msg);
+    header("Location: index.php?msg=" . $msg);
 }
 
 //print_r($_SESSION);
