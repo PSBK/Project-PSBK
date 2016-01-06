@@ -5,7 +5,7 @@
  * Date: 12/29/15
  * Time: 10:47 PM
  */
-
+ob_start();
 session_start();
 include_once("./Setting.php");
 include_once("./Order.php");
@@ -54,4 +54,5 @@ if ($data->count() == 0) {
     header("Location: " . $s->getPath() . "index.php?msg=" . $msg);
 }
 
+ob_end_flush();
 //print_r($data);

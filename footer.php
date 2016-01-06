@@ -20,3 +20,7 @@
     </div>
     <!-- End container -->
 </footer><!-- End footer -->
+
+<?php
+ob_end_flush();
+?>

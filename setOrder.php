@@ -5,6 +5,7 @@
  * Date: 12/29/15
  * Time: 9:43 PM
  */
+ob_start();
 session_start();
 include_once("./Setting.php");
 include_once("./order.php");
@@ -46,5 +47,6 @@ if ($order->getIdDeparture() == "" || $order->getIdDeparture() == null) {
     header("Location:" . $s->getPath() . "processOrder.php");
 }
 
+ob_end_flush();
 
 

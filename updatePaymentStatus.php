@@ -5,6 +5,7 @@
  * Date: 12/30/15
  * Time: 3:12 PM
  */
+ob_start();
 session_start();
 include_once("./Setting.php");
 $s = new Setting();
@@ -28,3 +29,5 @@ if ($data->count() != 0) {
     $msg = base64_encode($msg);
     header("Location : ./index.php?msg=" . $msg);
 }
+
+ob_end_flush();

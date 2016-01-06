@@ -5,7 +5,7 @@
  * Date: 12/30/15
  * Time: 12:17 PM
  */
-
+ob_start();
 session_start();
 include_once("./Setting.php");
 include_once("./Order.php");
@@ -36,5 +36,5 @@ $order->setDDate((string)$data->children()[0]->jam_berangkat);
 $_SESSION["order"] = serialize($order);
 
 header("Location: " . $s->getPath() . "processOrder.php");
-
+ ob_end_flush();
 

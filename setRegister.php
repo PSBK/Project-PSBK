@@ -7,6 +7,7 @@
  */
 
 //email, password, nama, kota, noKtp, noTelp
+ob_start();
 session_start();
 include_once("./Setting.php");
 $s = new Setting();
@@ -38,3 +39,5 @@ if ($data->count() == 0) {
 }
 
 header("Location: " . $s->getPath() . "index.php?msg=" . $msg);
+
+ob_end_flush();

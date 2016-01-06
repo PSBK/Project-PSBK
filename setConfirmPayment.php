@@ -5,6 +5,7 @@
  * Date: 12/30/15
  * Time: 4:51 PM
  */
+ob_start();
 session_start();
 include_once("./Setting.php");
 $s = new Setting();
@@ -35,3 +36,4 @@ if (isset($_POST['id']) && isset($_POST['bankName']) && isset($_POST['accNo']) &
 } else {
     die();
 }
+ob_end_flush();

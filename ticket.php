@@ -1,4 +1,5 @@
 <?
+ob_start();
 session_start();
 include_once("./Setting.php");
 include_once("./Cities.php");

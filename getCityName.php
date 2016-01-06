@@ -6,7 +6,7 @@
  * Date: 12/29/15
  * Time: 6:55 PM
  */
-include_once("Setting.php");
+include_once("./Setting.php");
 
 class getCityName
 {
