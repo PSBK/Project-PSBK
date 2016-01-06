@@ -3,9 +3,9 @@
 class Setting
 {
 
-    private $url = "http://localhost:8888/PSBK/xml/";
+    private $url = "http://localhost/PSBK/xml/";
 //    private  $url = "http://192.168.1.172/publish/ticbusonws.asmx/";
-    private $nPath = "http://localhost:8888/PSBK/";
+    private $nPath = "http://localhost/PSBK/";
 
 
     //http://192.168.1.172/tickbusonws.asmx/login
