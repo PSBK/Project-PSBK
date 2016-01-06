@@ -2,13 +2,17 @@
 
 class Setting
 {
-    private $url = "http://localhost/PSBK/xml/";
-    private $nPath = "http://localhost/PSBK/";
+    private $url;
+    private $nPath;
 
     private $urlticket = "xml/ticketlist.xml";
     private $urlpromo = "xml/promolist.xml";
     private $urlindex = "xml/listkota.xml";
 
+    function Setting(){
+        $this->url = "http://$_SERVER[HTTP_HOST]/PSBK/xml/";
+        $this->nPath = "http://$_SERVER[HTTP_HOST]/PSBK/";
+    }
 
     //////////////DUMMY XML LINKS START///////////////////////////////////////////////
     //Comment Bagian Dummy xml links untuk LIVE testing//

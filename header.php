@@ -5,14 +5,13 @@
  * Date: 11/18/15
  * Time: 9:53 AM
  */
-session_start();
+//session_start();
 include_once("./Order.php");
 include_once("./Setting.php");
 include_once("./Cities.php");
 
 $s = new Setting();
 ?>
-
 <!DOCTYPE html>
 <!--[if IE 8]>
 <html class="ie ie8"> <![endif]-->

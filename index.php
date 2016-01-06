@@ -1,12 +1,14 @@
 <?php
+session_start();
 include_once("./header.php");
-//include_once("rio/Kota.php");
 include_once("./Setting.php");
 $s = new Setting();
 $bUrl = $s->getUrl();
 $path = $s->getPath();
+//print_r($_SESSION);
 
-$_SESSION['order'] = null;
+//$_SESSION['order'] = null;
+unset($_SESSION['order']);
 
 ?>
 <section id="search_container">
