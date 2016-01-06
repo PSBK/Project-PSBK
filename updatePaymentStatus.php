@@ -5,7 +5,7 @@
  * Date: 12/30/15
  * Time: 3:12 PM
  */
-
+session_start();
 include_once("./Setting.php");
 $s = new Setting();
 

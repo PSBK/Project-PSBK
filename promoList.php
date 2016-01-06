@@ -1,12 +1,12 @@
 <?
 
+session_start();
 include_once("./Setting.php");
 include_once("./Cities.php");
 include_once("./Order.php");
 $s = new Setting();
 //$msg = "Some Fields Might Be Empty";
 //$msg = base64_encode($msg);
-session_start();
 //ini_set('display_errors', 1);
 //ini_set('display_startup_errors', 1);
 //error_reporting(E_ALL);

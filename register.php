@@ -1,4 +1,6 @@
-<? include_once("header.php");
+<?
+session_start();
+include_once("./header.php");
 include_once("./Setting.php");
 
 $s = new Setting();

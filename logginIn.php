@@ -6,21 +6,25 @@
  * Time: 11:24 AM
  */
 
+session_start();
 include_once("Setting.php");
 $s = new Setting();
-
 if (isset($_SESSION['name'])) {
     unset($_SESSION["uid"]);
     unset($_SESSION["mail"]);
     unset($_SESSION["name"]);
 }
-
 $mail = $_GET["email"];
 $pass = $_GET["pass"];
-
-
 //session_destroy();
-session_start();
+
+if(isset($_SESSION["name"])){
+    $msg = "Already Logged In";
+    $msg = base64_encode($msg);
+    header("Location: index.php?msg=" . $msg);
+    die();
+}
+
 $url = $s->getLoginUrl() . "?email=" . $mail . "&password=" . $pass;
 //$urlFalse = "http://192.168.1.172/publish/ticbusonws.asmx/login?email=%27" . $mail . "%27&password=%27" . $pass . "%27";
 $urlFalse = "http://localhost:8888/PSBK/xml/loginFalse.xml";

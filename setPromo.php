@@ -5,9 +5,10 @@
  * Date: 12/30/15
  * Time: 12:17 PM
  */
+
+session_start();
 include_once("./Setting.php");
 include_once("./Order.php");
-session_start();
 $s = new Setting();
 if (!isset($_GET['tid']) || !isset($_GET['seat'])) {
     header("Location: " . $s->getPath());

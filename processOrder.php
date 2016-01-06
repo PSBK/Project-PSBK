@@ -5,9 +5,10 @@
  * Date: 12/29/15
  * Time: 10:47 PM
  */
+
+session_start();
 include_once("./Setting.php");
 include_once("./Order.php");
-session_start();
 
 $s = new Setting();
 

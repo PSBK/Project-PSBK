@@ -1,11 +1,10 @@
 <?
-
+session_start();
 include_once("./Setting.php");
 include_once("./Cities.php");
 include_once("./Order.php");
 $s = new Setting();
 
-session_start();
 $msg = "No Access";
 $msg = base64_encode($msg);
 if (!isset($_SESSION['uid']) || !isset($_SESSION['mail']) || $_SESSION['uid'] == "" || $_SESSION['uid'] == null) {
