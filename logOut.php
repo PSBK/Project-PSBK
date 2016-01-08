@@ -10,7 +10,7 @@ session_start();
 session_destroy();
 
 
-$_SESSION['greetings'] = 0;
+$_SESSION["greetings"] = 0;
 header("Location: index.php");
 
 ob_end_flush();

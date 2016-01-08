@@ -6,7 +6,7 @@ include_once("./Setting.php");
 
 $s = new Setting();
 
-if (isset($_SESSION['uid'])) {
+if (isset($_SESSION["uid"])) {
     $msg = "Already Logged In";
     $msg = base64_encode($msg);
     ?>
@@ -36,8 +36,8 @@ if (isset($_SESSION['uid'])) {
                         </div>
 
                         <?
-                        if (isset($_GET['fr'])) {
-                            $frUrl = $_GET['fr'];
+                        if (isset($_GET["fr"])) {
+                            $frUrl = $_GET["fr"];
                             ?>
 
                             <div class="form-group" style="display: none;">

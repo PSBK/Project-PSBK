@@ -6,11 +6,11 @@ include_once("./Cities.php");
 include_once("./Order.php");
 $s = new Setting();
 $msg = "No Access";
-if (!isset($_SESSION['uid']) || !isset($_SESSION['mail']) || $_SESSION['uid'] == "" || $_SESSION['uid'] == null) {
+if (!isset($_SESSION["uid"]) || !isset($_SESSION["mail"]) || $_SESSION["uid"] == "" || $_SESSION["uid"] == null) {
     header("Location: " . $s->getPath() . "index.php?msg=" . $msg);
 } else {
-    $uid = $_SESSION['uid'];
-    $mail = $_SESSION['mail'];
+    $uid = $_SESSION["uid"];
+    $mail = $_SESSION["mail"];
 }
 
 $url = $s->getOrder() . "?user='$uid";

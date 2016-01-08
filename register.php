@@ -6,7 +6,7 @@ include_once("./Setting.php");
 
 $s = new Setting();
 
-if (isset($_SESSION['uid'])) {
+if (isset($_SESSION["uid"])) {
     $msg = "Already Logged In";
     $msg = base64_encode($msg);
     ?>

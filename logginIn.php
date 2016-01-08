@@ -9,7 +9,7 @@ ob_start();
 session_start();
 include_once("Setting.php");
 $s = new Setting();
-if (isset($_SESSION['name'])) {
+if (isset($_SESSION["name"])) {
     unset($_SESSION["uid"]);
     unset($_SESSION["mail"]);
     unset($_SESSION["name"]);
@@ -45,8 +45,8 @@ if ($data->count() != 0) {
     die();
 }
 
-if (isset($_GET['fr'])) {
-    $fr = $_GET['fr'];
+if (isset($_GET["fr"])) {
+    $fr = $_GET["fr"];
     header("Location: " . base64_decode($fr));
 } else {
     header("Location: index.php");

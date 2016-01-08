@@ -12,12 +12,12 @@ $s = new Setting();
 
 //print_r($_POST);
 
-if (isset($_POST['id']) && isset($_POST['bankName']) && isset($_POST['accNo']) && isset($_POST['accName']) && isset($_POST['date'])) {
-    $id = $_POST['id'];
-    $bankName = $_POST['bankName'];
-    $accNo = $_POST['accNo'];
-    $accName = $_POST['accName'];
-    $date = $_POST['date'];
+if (isset($_POST["id"]) && isset($_POST["bankName"]) && isset($_POST["accNo"]) && isset($_POST["accName"]) && isset($_POST["date"])) {
+    $id = $_POST["id"];
+    $bankName = $_POST["bankName"];
+    $accNo = $_POST["accNo"];
+    $accName = $_POST["accName"];
+    $date = $_POST["date"];
 
     //id, bankName, accNo, accName, date
     $url = $s->setConfirmPayment() . "?id='$id'&bankName='$bankName'&accNo='$accNo'&accName='$accName'&date='$date'";

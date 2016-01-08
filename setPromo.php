@@ -10,12 +10,12 @@ session_start();
 include_once("./Setting.php");
 include_once("./Order.php");
 $s = new Setting();
-if (!isset($_GET['tid']) || !isset($_GET['seat'])) {
+if (!isset($_GET["tid"]) || !isset($_GET["seat"])) {
     header("Location: " . $s->getPath());
 }
 
-$tid = $_GET['tid'];
-$seat = $_GET['seat'];
+$tid = $_GET["tid"];
+$seat = $_GET["seat"];
 $type = "ow";
 
 $order = new Order();

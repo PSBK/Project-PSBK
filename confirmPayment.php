@@ -4,14 +4,14 @@ include_once("./header.php");
 include_once("./Setting.php");
 $s = new Setting();
 
-if (isset($_GET['oid']) && isset($_SESSION['uid']) && $_GET['oid'] != "") {
-    $id = $_GET['oid'];
+if (isset($_GET["oid"]) && isset($_SESSION["uid"]) && $_GET["oid"] != "") {
+    $id = $_GET["oid"];
 } else {
     die();
 }
 
-if (isset($_GET['msg'])) {
-    $msg = base64_decode($_GET['msg']);
+if (isset($_GET["msg"])) {
+    $msg = base64_decode($_GET["msg"]);
     ?>
     <script>
         alert('<?=$msg;?>');

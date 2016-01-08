@@ -9,7 +9,7 @@ $path = $s->getPath();
 //print_r($_SESSION);
 
 //$_SESSION['order'] = null;
-unset($_SESSION['order']);
+unset($_SESSION["order"]);
 
 ?>
 <section id="search_container">
@@ -308,16 +308,16 @@ include_once("./footer.php");
     });
 </script>
 <?
-if (isset($_SESSION['name']) && $_SESSION['greetings'] != 1) {
+if (isset($_SESSION["name"]) && $_SESSION["greetings"] != 1) {
     ?>
 
     <script>
         $(document).ready(function () {
-            alert("Welcome <?=$_SESSION['name'];?>");
+            alert("Welcome <?=$_SESSION["name"];?>");
         });
     </script>
     <?
-    $_SESSION['greetings'] = 1;
+    $_SESSION["greetings"] = 1;
 }
 if (isset($_GET["msg"])) {
     $msg = base64_decode($_GET["msg"]);

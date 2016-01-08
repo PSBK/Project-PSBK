@@ -27,15 +27,15 @@ if (isset($_SESSION["order"])) {
     }
 } else {
     /////////////////////CEK POST///////////////////////////////
-    if (isset($_POST['origin']) && isset($_POST['destination']) && isset($_POST['tipe'])
-        && $_POST['origin'] != '' && $_POST['destination'] != ''
+    if (isset($_POST["origin"]) && isset($_POST["destination"]) && isset($_POST["tipe"])
+        && $_POST["origin"] != '' && $_POST["destination"] != ''
     ) {
-        $origin = $_POST['origin'];
-        $destination = $_POST['destination'];
-        $dDate = $_POST['dDate'];
-        $rDate = $_POST['rDate'];
-        $seat = $_POST['seat'];
-        $type = $_POST['tipe'];
+        $origin = $_POST["origin"];
+        $destination = $_POST["destination"];
+        $dDate = $_POST["dDate"];
+        $rDate = $_POST["rDate"];
+        $seat = $_POST["seat"];
+        $type = $_POST["tipe"];
         $order = new Order($origin, $destination, $seat, $dDate, $rDate, $type);
         $_SESSION["order"] = serialize($order);
         $date = $dDate;

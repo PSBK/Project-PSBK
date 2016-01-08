@@ -15,11 +15,11 @@ $s = new Setting();
 $actualUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 $actualUrl = base64_encode($actualUrl);
 
-if (!isset($_SESSION['uid']) || !isset($_SESSION['mail']) || $_SESSION['uid'] == "" || $_SESSION['uid'] == null) {
+if (!isset($_SESSION["uid"]) || !isset($_SESSION["mail"]) || $_SESSION["uid"] == "" || $_SESSION["uid"] == null) {
     header("Location: " . $s->getPath() . "login.php?fr=" . $actualUrl);
     return;
 } else {
-    $user = $_SESSION['uid'];
+    $user = $_SESSION["uid"];
 }
 
 if (!isset($_SESSION["order"])) {
@@ -51,7 +51,7 @@ if ($pp == 'ow') {
 } else {
     $msg .= "Return Trip\\n";
 }
-$msg .= "Ordered by : " . $_SESSION['name'] . "\\n";
+$msg .= "Ordered by : " . $_SESSION["name"] . "\\n";
 $data = simplexml_load_file($url);
 
 if ($data->count() == 0) {
@@ -59,7 +59,7 @@ if ($data->count() == 0) {
     $msg = base64_encode($msg);
     header("Location: " . $s->getPath() . "index.php?msg=" . $msg);
 } else {
-    $_SESSION['order'] = null;
+    $_SESSION["order"] = null;
     $msg .= "Order Process Success";
     $msg = base64_encode($msg);
     header("Location: " . $s->getPath() . "index.php?msg=" . $msg);
