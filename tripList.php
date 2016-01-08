@@ -44,7 +44,7 @@ if (isset($_SESSION["order"])) {
         header("Location: ./index.php?msg=" . $msg);
         ?>
         <!--script>
-            window.location = "<?= $s->getPath();?>index.php?msg=<?=$msg;?>"
+            window.location = "<?= $s->getPath(); ?>index.php?msg=<?= $msg; ?>"
         </script-->
         <?
     }
@@ -58,9 +58,15 @@ if ($type == 'ow') {
 
 
 //origin, destination, seat, date
-$getMeUrlOnichan = $s->getTrips() . "?origin='$origin'&destination='$destination'&date='$date'=&seat='$seat'&type='$type'";
-//echo $getMeUrlOnichan;
+$getMeUrlOnichan = $s->getTrips() . "?origin='$origin'&destination='$destination'&seat=$seat&date='$date'";
+
 $data = simplexml_load_file($getMeUrlOnichan);
+
+if ($data->count() == 0) {
+    $msg = base64_encode("NO RESULT FOUND");
+    header("Location: " . $s->getPath());
+}
+
 include_once("./header.php");
 ?>
 

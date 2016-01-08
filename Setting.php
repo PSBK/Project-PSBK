@@ -9,8 +9,10 @@ class Setting
 //    private $urlpromo = "xml/promolist.xml";
 //    private $urlindex = "xml/listkota.xml";
 
-    function Setting(){
+    function Setting()
+    {
         $this->url = "http://$_SERVER[HTTP_HOST]/PSBK/xml/"; //GANTI DISINI UNTUK URL WS YANG ASLI
+//        $this->url = "http://192.168.1.115/publish/ticbusonws.asmx/";
         $this->nPath = "http://$_SERVER[HTTP_HOST]/PSBK/";
     }
 

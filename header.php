@@ -6,6 +6,7 @@
  * Time: 9:53 AM
  */
 //session_start();
+ini_set('display_errors', 'Off');
 include_once("./Order.php");
 include_once("./Setting.php");
 include_once("./Cities.php");

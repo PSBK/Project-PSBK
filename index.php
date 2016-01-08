@@ -55,7 +55,7 @@ unset($_SESSION["order"]);
                             <div class="form-group">
                                 <label><i class="icon-calendar-7"></i>Departure Date</label>
                                 <input class="date-pick1 form-control"
-                                       data-date-format="dd-mm-yyyy"
+                                       data-date-format="yyyy-mm-dd"
                                        type="text"
                                        id="dDate"
                                        name="dDate"
@@ -95,7 +95,7 @@ unset($_SESSION["order"]);
                             <div class="form-group">
                                 <label><i class="icon-calendar-7"></i>Return Date</label>
                                 <input class="date-pick2 form-control"
-                                       data-date-format="dd-mm-yyyy"
+                                       data-date-format="yyyy-mm-dd"
                                        type="text"
                                        id="rDate"
                                        name="rDate">
@@ -277,14 +277,18 @@ include_once("./footer.php");
 
         $('select#origin').change(function () {
 
-            $('select#destination').prop( "disabled", true );
+            $('select#destination').prop("disabled", true);
 
             var codeOrigin = $('select#origin option:selected').val();
-//            console.log(codeOrigin);
+            console.log(codeOrigin);
+            var url = "<?=$s->getPath();?>sendy/getDestination.php?code=" + codeOrigin;
+            var urls = "http://192.168.1.115/publish/ticbusonws.asmx/getDestination?code='" + codeOrigin + "'";
+            console.log(url);
             if (codeOrigin != "") {
                 $.ajax({
-                        url: "<?=$s->getPath();?>/sendy/getDestination.php?code=" + "'" + codeOrigin + "'",
-                        success: addDestination,
+                        url: url,
+//                        console.log(url);
+                        success: addDestination
                     }
                 )
             } else {
@@ -296,7 +300,7 @@ include_once("./footer.php");
         function addDestination(data) {
 //            console.log(data);
 
-            $('select#destination').prop( "disabled", false );
+            $('select#destination').prop("disabled", false);
             $('select#destination').empty()
                 .append('<option value="">Select Destination</option>');
             $(data).find("Table1").each(function () {

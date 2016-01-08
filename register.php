@@ -1,7 +1,6 @@
-<?
+<?php
 ob_start();
 session_start();
-include_once("./header.php");
 include_once("./Setting.php");
 
 $s = new Setting();
@@ -9,12 +8,11 @@ $s = new Setting();
 if (isset($_SESSION["uid"])) {
     $msg = "Already Logged In";
     $msg = base64_encode($msg);
-    ?>
-    <script>
-        window.location = "<?= $s->getPath();?>index.php?msg=<?=$msg;?>"
-    </script>
-    <?
+
+    header("Location: " . $s->getPath() . "index.php?msg=" . $msg);
 }
+
+include_once("./header.php");
 //email, password, nama, kota, noKtp, noTelp
 ?>
 <section id="hero" class="login">
